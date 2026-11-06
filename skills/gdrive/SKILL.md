@@ -1,6 +1,6 @@
 ---
 name: gdrive
-description: 用本机已登录的 rclone 远程 gdrive 操作谷歌网盘：列目录、看配额、读、下载、上传、建文件夹、移动、复制、同步、生成分享链接、挂载、查重、进回收站。用户提到网盘、云盘、Google Drive、gdrive，或要在网盘里找、传、下、整理文件时就用。不要用 @mcp-z/mcp-drive，那个服务没有登录。
+description: 用本机已登录的 rclone 远程 gdrive 操作谷歌网盘：列目录、看配额、读、下载、上传、建文件夹、移动、复制、同步、生成分享链接、挂载、查重、进回收站。用户提到网盘、云盘、Google Drive、gdrive，或要在网盘里找、传、下、整理文件时就用。
 compatibility: 需要本机 /opt/homebrew/bin/rclone，以及已配置的远程 gdrive。
 ---
 
