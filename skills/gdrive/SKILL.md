@@ -6,7 +6,7 @@ compatibility: 需要本机 /opt/homebrew/bin/rclone，以及已配置的远程 
 
 # 谷歌网盘
 
-这台电脑的网盘已经用 rclone 登录。所有网盘操作都走这条远程，不要再走 OAuth，也不要调 `magpie-mcp-drive`。
+这台电脑的网盘已经用 rclone 登录。所有网盘操作都走这条远程。
 
 - 命令：`/opt/homebrew/bin/rclone`
 - 远程名：`gdrive`
