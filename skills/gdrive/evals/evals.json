@@ -1,0 +1,26 @@
+{
+  "skill_name": "gdrive",
+  "evals": [
+    {
+      "id": 1,
+      "name": "list-root",
+      "prompt": "我的谷歌网盘根目录现在有哪些文件夹？只列名字，不要下载，也不要改任何文件。",
+      "expected_output": "用 rclone 的 gdrive 远程列出根目录文件夹名字。",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "quota",
+      "prompt": "帮我看一下谷歌网盘还剩多少空间。",
+      "expected_output": "用 rclone about gdrive: 报告已用和总容量。",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "how-to-share",
+      "prompt": "我想把网盘里某个 PDF 发成一个别人能打开的链接。这台电脑上应该用什么命令？先别真的生成，告诉我命令和注意点。",
+      "expected_output": "指出 rclone link，路径用 gdrive:，并说明先确认文件存在。",
+      "files": []
+    }
+  ]
+}
