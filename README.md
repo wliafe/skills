@@ -2,7 +2,7 @@
 
 给智能体用的技能。一个目录一个技能，目录名就是技能的 `name`，每个目录里有一份 `SKILL.md`。技能只写操作流程，不把某台电脑上的文件、密钥或账号写进去。
 
-三个技能都是 MIT 许可证，见根目录的 [LICENSE](LICENSE)。
+四个技能都是 MIT 许可证，见根目录的 [LICENSE](LICENSE)。
 
 ## 安装
 
@@ -28,6 +28,7 @@ npx skills add wliafe/skills --all -g
 | [gdrive](skills/gdrive) | 用户提到网盘、云盘、Google Drive、gdrive，或要在网盘里找、传、下、整理文件 | 本机 rclone，已配好远程 `gdrive` |
 | [drawio-skill](skills/drawio-skill) | 要用 Next AI Draw.io 画图、改图、插图片、导出 | Next AI Draw.io MCP（`@next-ai-drawio/mcp-server`） |
 | [notion-maintenance-skill](skills/notion-maintenance-skill) | 要维护 Notion。只点名本技能、没有其他说明时，默认更新 AI 工作台 | Notion MCP |
+| [xrdp-desktop](skills/xrdp-desktop) | 要开、关远程桌面，看桌面状态，或连上就断、闪退；要把桌面改成按需开启 | 目标机已装 xrdp + XFCE，本机能 SSH 上去 |
 
 ### gdrive
 
@@ -49,6 +50,12 @@ npx skills add wliafe/skills --all -g
 
 只点名本技能、没有其他说明时，默认收集当前与近期对话，更新 AI 工作台。带了其他说明，就按说明维护工作台、知识库、工作方式或项目页。
 
+### xrdp-desktop
+
+把已装好 xrdp 和 XFCE 的 Linux 机器改成「需要时才开」：不开机自启，用前手动开，开之前先清掉上次残留的会话，空闲超过设定分钟数自动关。
+
+技能不写某台机器的地址、端口、用户名和密码。连哪台、端口多少、空闲多久，按当场情况和用户说的来。连不上时先读 `/var/log/xrdp.log` 和 `/var/log/xrdp-sesman.log` 再下结论。
+
 ## 目录
 
 ```
@@ -59,7 +66,9 @@ skills/
 ├── gdrive/
 │   ├── SKILL.md
 │   └── evals/            只读测试题
-└── notion-maintenance-skill/
-    ├── SKILL.md
-    └── references/        怎么找「使用说明」、默认同步工作台
+├── notion-maintenance-skill/
+│   ├── SKILL.md
+│   └── references/        怎么找「使用说明」、默认同步工作台
+└── xrdp-desktop/
+    └── SKILL.md
 ```
