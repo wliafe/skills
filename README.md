@@ -2,7 +2,7 @@
 
 给智能体用的技能。一个目录一个技能，目录名就是技能的 `name`，每个目录里有一份 `SKILL.md`。技能只写操作流程，不把某台电脑上的文件、密钥或账号写进去。
 
-四个技能都是 MIT 许可证，见根目录的 [LICENSE](LICENSE)。
+三个技能都是 MIT 许可证，见根目录的 [LICENSE](LICENSE)。
 
 ## 安装
 
@@ -25,17 +25,17 @@ npx skills add wliafe/skills --all -g
 
 | 技能 | 用在什么时候 | 依赖 |
 | --- | --- | --- |
-| [gdrive](skills/gdrive) | 用户提到网盘、云盘、Google Drive、gdrive，或要在网盘里找、传、下、整理文件 | 本机 rclone，已配好远程 `gdrive` |
+| [gdrive](skills/gdrive) | 用户提到网盘、云盘、Google Drive、gdrive，或要在网盘里找、传、下、整理文件 | macOS 上已登录的 Google Drive 桌面端，本地同步目录可访问 |
 | [drawio-skill](skills/drawio-skill) | 要用 Next AI Draw.io 画图、改图、插图片、导出 | Next AI Draw.io MCP（`@next-ai-drawio/mcp-server`） |
 | [notion-maintenance-skill](skills/notion-maintenance-skill) | 要维护 Notion。只点名本技能、没有其他说明时，默认更新 AI 工作台 | Notion MCP |
 
 ### gdrive
 
-用本机已登录的 rclone 远程 `gdrive` 操作谷歌网盘。远程名和命令路径写在技能里，盘里有什么以当场列出的为准，不记录文件夹、文件名或容量。
+通过 Google Drive 桌面端的本地同步目录（macOS File Provider）操作谷歌网盘，用 `ls`、`cp`、`mv` 这类普通命令，不用 rclone。盘里有什么以当场列出的为准，不记录文件夹、文件名或容量。
 
-覆盖的操作：列目录、看配额、读文本、下载、上传、建文件夹、移动、复制、同步、生成分享链接、挂载、查重、进回收站。删除进回收站，恢复只能去 [drive.google.com](https://drive.google.com)。
+覆盖的操作：列目录、查文件、读文本、复制到本地、上传、建文件夹、移动重命名、删除。文件按需流式下载（`dataless`），读内容才会拉取，所以不对大目录做无过滤的全文搜索。本地目录做不到的事（云端配额、分享链接和权限、`.gdoc` 等在线文档导出）技能会如实说明，并指向桌面端或 [drive.google.com](https://drive.google.com)。
 
-不读 rclone 的配置文件，里面有 client secret 和 token。不跑 `rclone config`，也不跑 `rclone selfupdate`。
+不改写 `.gdoc`、`.gsheet`、`.gslides` 指针文件，也不动 `.Encrypted`、`.shortcut-targets-by-id`、`.Trash`。覆盖和删除前先向用户确认路径。
 
 ### drawio-skill
 

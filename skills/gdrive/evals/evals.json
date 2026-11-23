@@ -5,21 +5,21 @@
       "id": 1,
       "name": "list-root",
       "prompt": "我的谷歌网盘根目录现在有哪些文件夹？只列名字，不要下载，也不要改任何文件。",
-      "expected_output": "用 rclone 的 gdrive 远程列出根目录文件夹名字。",
+      "expected_output": "直接列出 /Users/wliafe/Google Drive/我的云端硬盘 下的文件夹名字，只读目录元数据而不触发 dataless 文件下载，不使用 rclone。",
       "files": []
     },
     {
       "id": 2,
       "name": "quota",
       "prompt": "帮我看一下谷歌网盘还剩多少空间。",
-      "expected_output": "用 rclone about gdrive: 报告已用和总容量。",
+      "expected_output": "说明本地同步目录（以及 df/du）只能反映本机磁盘而非 Google Drive 云端总配额与已用空间，不调用 rclone，指导用户在 Google Drive 桌面端菜单或 drive.google.com 查看。",
       "files": []
     },
     {
       "id": 3,
       "name": "how-to-share",
-      "prompt": "我想把网盘里某个 PDF 发成一个别人能打开的链接。这台电脑上应该用什么命令？先别真的生成，告诉我命令和注意点。",
-      "expected_output": "指出 rclone link，路径用 gdrive:，并说明先确认文件存在。",
+      "prompt": "我想把网盘里某个 PDF 发成一个别人能打开的链接。这台电脑上应该用什么方式处理？先别真的生成，告诉我做法和注意点。",
+      "expected_output": "说明当前改为本地目录 /Users/wliafe/Google Drive 访问且已无 rclone，本地命令无法直接生成分享链接；应先在本地目录确认文件存在，再通过 Finder 右键 Google Drive 菜单或 drive.google.com 网页端生成并设置共享权限。",
       "files": []
     }
   ]
