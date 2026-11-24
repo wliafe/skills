@@ -2,7 +2,7 @@
 
 给智能体用的技能。一个目录一个技能，目录名就是技能的 `name`，每个目录里有一份 `SKILL.md`。技能只写操作流程，不把某台电脑上的文件、密钥或账号写进去。
 
-三个技能都是 MIT 许可证，见根目录的 [LICENSE](LICENSE)。
+本仓库采用 MIT 许可证，见根目录的 [LICENSE](LICENSE)。
 
 ## 安装
 
@@ -28,6 +28,7 @@ npx skills add wliafe/skills --all -g
 | [gdrive](skills/gdrive) | 用户提到网盘、云盘、Google Drive、gdrive，或要在网盘里找、传、下、整理文件 | macOS 上已登录的 Google Drive 桌面端，本地同步目录可访问 |
 | [drawio-skill](skills/drawio-skill) | 要用 Next AI Draw.io 画图、改图、插图片、导出 | Next AI Draw.io MCP（`@next-ai-drawio/mcp-server`） |
 | [notion-maintenance-skill](skills/notion-maintenance-skill) | 要维护 Notion。只点名本技能、没有其他说明时，默认更新 AI 工作台 | Notion MCP |
+| [team-handoff](skills/team-handoff) | 用户要求用团队，或需要把任务交给队友并行或接力执行 | 支持子智能体和共享任务板的 DeepSeek Harness |
 
 ### gdrive
 
@@ -62,4 +63,6 @@ skills/
 ├── notion-maintenance-skill/
 │   ├── SKILL.md
 │   └── references/        怎么找「使用说明」、默认同步工作台
+└── team-handoff/
+    └── SKILL.md           调查与执行模板、会话内复用和任务交接
 ```
