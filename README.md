@@ -29,6 +29,7 @@ npx skills add wliafe/skills --all -g
 | [drawio-skill](skills/drawio-skill) | 要用 Next AI Draw.io 画图、改图、插图片、导出 | Next AI Draw.io MCP（`@next-ai-drawio/mcp-server`） |
 | [notion-maintenance-skill](skills/notion-maintenance-skill) | 要维护 Notion。只点名本技能、没有其他说明时，默认更新 AI 工作台 | Notion MCP |
 | [team-handoff](skills/team-handoff) | 用户要求用团队，或需要把任务交给队友并行或接力执行 | 支持子智能体和共享任务板的 DeepSeek Harness |
+| [read-project](skills/read-project) | 了解陌生项目，或为改代码、配置环境、创建 worktree 补齐项目背景 | 可读取目标项目文件 |
 
 ### gdrive
 
@@ -50,6 +51,10 @@ npx skills add wliafe/skills --all -g
 
 只点名本技能、没有其他说明时，默认收集当前与近期对话，更新 AI 工作台。带了其他说明，就按说明维护工作台、知识库、工作方式或项目页。
 
+### read-project
+
+先读完整 README，再核对环境和启动方式、理解关键目录职责，最后沿一条代表性路径读代码。多入口仓库先给根级概览，按本次目标选择一条主线。重要结论附出处，未运行的命令注明核验状态。
+
 ## 目录
 
 ```
@@ -63,6 +68,8 @@ skills/
 ├── notion-maintenance-skill/
 │   ├── SKILL.md
 │   └── references/        怎么找「使用说明」、默认同步工作台
+├── read-project/
+│   └── SKILL.md           从项目文档、启动入口和目录职责走到核心代码
 └── team-handoff/
     └── SKILL.md           调查与执行模板、会话内复用和任务交接
 ```
