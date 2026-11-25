@@ -27,7 +27,7 @@ npx skills add wliafe/skills --all -g
 | --- | --- | --- |
 | [gdrive](skills/gdrive) | 用户提到网盘、云盘、Google Drive、gdrive，或要在网盘里找、传、下、整理文件 | macOS 上已登录的 Google Drive 桌面端，本地同步目录可访问 |
 | [drawio-skill](skills/drawio-skill) | 要用 Next AI Draw.io 画图、改图、插图片、导出 | Next AI Draw.io MCP（`@next-ai-drawio/mcp-server`） |
-| [notion-maintenance-skill](skills/notion-maintenance-skill) | 要维护 Notion。只点名本技能、没有其他说明时，默认更新 AI 工作台 | Notion MCP |
+| [notion-maintenance-skill](skills/notion-maintenance-skill) | 沿目录树按需读取 Notion 内容、排查 MCP 连接，或在写前定位 Notion 实时维护指南 | Notion MCP |
 | [team-handoff](skills/team-handoff) | 用户要求用团队，或需要把任务交给队友并行或接力执行 | 支持子智能体和共享任务板的 DeepSeek Harness |
 | [read-project](skills/read-project) | 了解陌生项目，或为改代码、配置环境、创建 worktree 补齐项目背景 | 可读取目标项目文件 |
 
@@ -47,9 +47,9 @@ npx skills add wliafe/skills --all -g
 
 ### notion-maintenance-skill
 
-用 Notion MCP 维护 Notion。改之前先找到并读「使用说明」，再按那里的要求做。规则正文只在 Notion 里，不在这个技能里。
+用 Notion MCP 沿目录树逐层定位并按需读取 Notion 内容，同时提供只读 MCP 连接检查与排查。规则正文、收集范围与结构演进规范只在 Notion 实时维护指南里，不内置在本技能中。
 
-只点名本技能、没有其他说明时，默认收集当前与近期对话，更新 AI 工作台。带了其他说明，就按说明维护工作台、知识库、工作方式或项目页。
+仅点名本技能、没有其他说明时，只做只读连接检查或确认读取入口，不默认收集对话或写入。只有明确要求写入或整理时，才先沿目录树找 Notion 实时维护指南并按其执行。
 
 ### read-project
 
@@ -67,7 +67,7 @@ skills/
 │   └── evals/            只读测试题
 ├── notion-maintenance-skill/
 │   ├── SKILL.md
-│   └── references/        怎么找「使用说明」、默认同步工作台
+│   └── references/        MCP 检查与连接、目录树读取方法
 ├── read-project/
 │   └── SKILL.md           从项目文档、启动入口和目录职责走到核心代码
 └── team-handoff/
