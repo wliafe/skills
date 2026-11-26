@@ -30,6 +30,7 @@ npx skills add wliafe/skills --all -g
 | [notion-maintenance-skill](skills/notion-maintenance-skill) | 要维护 Notion。只点名本技能、没有其他说明时，默认更新 AI 工作台 | Notion MCP |
 | [team-handoff](skills/team-handoff) | 用户要求用团队，或需要把任务交给队友并行或接力执行 | 支持子智能体和共享任务板的 DeepSeek Harness |
 | [read-project](skills/read-project) | 了解陌生项目，或为改代码、配置环境、创建 worktree 补齐项目背景 | 可读取目标项目文件 |
+| [personal-coding-style](skills/personal-coding-style) | 编写、重构或审查代码时，按个人习惯判断职责划分、函数拆分、跨项目复用和状态归属 | 无 |
 
 ### gdrive
 
@@ -68,6 +69,8 @@ skills/
 ├── notion-maintenance-skill/
 │   ├── SKILL.md
 │   └── references/        怎么找「使用说明」、默认同步工作台
+├── personal-coding-style/
+│   └── SKILL.md           个人编码习惯与设计取舍
 ├── read-project/
 │   └── SKILL.md           从项目文档、启动入口和目录职责走到核心代码
 └── team-handoff/
